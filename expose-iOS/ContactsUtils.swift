@@ -38,14 +38,11 @@ class ContactsUtils{
                     if let phoneCN = contact.phoneNumbers[0].value as? CNPhoneNumber{
                         if let phoneSting = phoneCN.valueForKey("digits") as? String{
                             if let phone = Int(phoneSting){
-                                contactsArray.append(ModelContact(aFirstName: contact.givenName, aLastName: contact.familyName, aPhoneNumber: phone))
+                                contactsArray.append(ModelContact(aName: contact.givenName + " " + contact.familyName, aPhoneNumber: phone))
                             }
                         }
                     }
                 }
-                //if (!contact.emailAddresses.isEmpty){
-                //Add to your array
-                //}
             }
             return contactsArray
         }

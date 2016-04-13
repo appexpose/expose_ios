@@ -10,14 +10,15 @@ import Foundation
 
 class ModelContact{
     
-    var firstName = ""
-    var lastName = ""
+    var name = ""
     var phoneNumber = 0
+    var commentsAmount = 0
+    var lastContent = ""
+    var rating = 0
     
-    convenience init(aFirstName: String, aLastName: String, aPhoneNumber: Int){
+    convenience init(aName:String, aPhoneNumber: Int){
         self.init()
-        firstName = aFirstName
-        lastName = aLastName
+        name = aName
         phoneNumber = aPhoneNumber
     }
 }

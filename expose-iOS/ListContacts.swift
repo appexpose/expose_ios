@@ -1,5 +1,5 @@
 //
-//  UpdateContacts.swift
+//  ListContacts.swift
 //  expose-iOS
 //
 //  Created by Manuel Martinez Gomez on 13/4/16.
@@ -8,16 +8,11 @@
 
 import Foundation
 
-class UpdateContacts{
-
-    static func updateContacts(contactsArray:[ModelContact]){
+class ListContacts{
+    
+    static func listContacts(){
         let urlServidor = "http://www.appexpose.com/server/1.0.1/models/model.php"
-        var numbersString = ""
-        for contact in contactsArray{
-            numbersString += contact.name + "::" + "\(contact.phoneNumber)" + ","
-        }
-        
-        let params = "action=update_contacts&device_key=\(GlobalVariables.returnDeviceKey())&numbers=\(numbersString)&system=\(GlobalVariables.returnSystem())"
+        let params = "action=list_contacts&device_key=\(GlobalVariables.returnDeviceKey())"
         let request = NSMutableURLRequest(URL: NSURL(string: urlServidor)!)
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
@@ -32,7 +27,7 @@ class UpdateContacts{
                 if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: [NSJSONReadingOptions.MutableContainers]) as? NSDictionary {
                     if let resultCode = json.objectForKey("result") as? Int{
                         if(resultCode == 1){
-                             NSNotificationCenter.defaultCenter().postNotificationName(GlobalVariables.returnUpdateContactsNotification(), object: nil)
+                            print(json)
                         }else{
                             if let erroCode = json.objectForKey("error_code") as? String{
                                 print(erroCode)

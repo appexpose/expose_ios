@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="-803" y="-7"/>
         </scene>
-        <!--Expose-->
+        <!--Contactos-->
         <scene sceneID="P3j-Xy-kBr">
             <objects>
-                <viewController id="fJL-aB-EYN" sceneMemberID="viewController">
+                <viewController id="fJL-aB-EYN" customClass="ContactsViewController" customModule="expose_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rxx-S9-kWy"/>
                         <viewControllerLayoutGuide type="bottom" id="RjG-o4-M0R"/>
@@ -52,13 +52,13 @@
                     <view key="view" contentMode="scaleToFill" id="PKL-k5-Qhw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Expose" id="5rh-r6-29I"/>
+                    <navigationItem key="navigationItem" title="Contactos" id="5rh-r6-29I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXR-Ia-OS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="347"/>
+            <point key="canvasLocation" x="1583" y="323"/>
         </scene>
         <!--Expose-->
         <scene sceneID="mgN-Z0-Vfk">

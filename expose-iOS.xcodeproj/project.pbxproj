@@ -16,6 +16,8 @@
 		64B68D951CBEBC3A0033DD19 /* ContactsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B68D941CBEBC3A0033DD19 /* ContactsUtils.swift */; };
 		64B68D971CBEBEF20033DD19 /* UpdateContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B68D961CBEBEF20033DD19 /* UpdateContacts.swift */; };
 		64B68D9A1CBEBF8F0033DD19 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B68D991CBEBF8F0033DD19 /* GlobalVariables.swift */; };
+		64B68DBC1CBECF390033DD19 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B68DBB1CBECF390033DD19 /* ContactsViewController.swift */; };
+		64B68DBF1CBECFA50033DD19 /* ListContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B68DBE1CBECFA50033DD19 /* ListContacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		64B68D941CBEBC3A0033DD19 /* ContactsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsUtils.swift; sourceTree = "<group>"; };
 		64B68D961CBEBEF20033DD19 /* UpdateContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateContacts.swift; sourceTree = "<group>"; };
 		64B68D991CBEBF8F0033DD19 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		64B68DBB1CBECF390033DD19 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		64B68DBE1CBECFA50033DD19 /* ListContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListContacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		64B68D7A1CBEAD450033DD19 /* expose-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				64B68DBD1CBECF850033DD19 /* WS */,
 				64B68D931CBEBC260033DD19 /* Utils */,
 				64B68D901CBEB2230033DD19 /* Models */,
 				64B68D8D1CBEAD5D0033DD19 /* Controllers */,
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				64B68D8E1CBEAD750033DD19 /* InitialViewController.swift */,
+				64B68DBB1CBECF390033DD19 /* ContactsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -94,10 +100,18 @@
 			isa = PBXGroup;
 			children = (
 				64B68D941CBEBC3A0033DD19 /* ContactsUtils.swift */,
-				64B68D961CBEBEF20033DD19 /* UpdateContacts.swift */,
 				64B68D991CBEBF8F0033DD19 /* GlobalVariables.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		64B68DBD1CBECF850033DD19 /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				64B68D961CBEBEF20033DD19 /* UpdateContacts.swift */,
+				64B68DBE1CBECFA50033DD19 /* ListContacts.swift */,
+			);
+			name = WS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B68DBF1CBECFA50033DD19 /* ListContacts.swift in Sources */,
 				64B68D9A1CBEBF8F0033DD19 /* GlobalVariables.swift in Sources */,
+				64B68DBC1CBECF390033DD19 /* ContactsViewController.swift in Sources */,
 				64B68D7C1CBEAD450033DD19 /* AppDelegate.swift in Sources */,
 				64B68D921CBEB2370033DD19 /* ModelContact.swift in Sources */,
 				64B68D951CBEBC3A0033DD19 /* ContactsUtils.swift in Sources */,
