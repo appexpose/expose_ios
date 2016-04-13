@@ -6,7 +6,7 @@
 //  Copyright © 2016 Citious Team SL. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ModelContact{
     
@@ -15,10 +15,14 @@ class ModelContact{
     var commentsAmount = 0
     var lastContent = ""
     var rating = 0
+    var avatar: UIImage?
     
-    convenience init(aName:String, aPhoneNumber: Int){
+    convenience init(aName:String, aPhoneNumber: Int, avatarData: NSData?){
         self.init()
         name = aName
         phoneNumber = aPhoneNumber
+        if let dataImage = avatarData{
+            avatar = UIImage(data: dataImage)
+        }
     }
 }

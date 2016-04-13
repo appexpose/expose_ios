@@ -32,13 +32,13 @@ class ContactsUtils{
     static func retrieveContactsWithStore(store: CNContactStore) -> [ModelContact] {
         var contactsArray = [ModelContact]()
         do {
-            try store.enumerateContactsWithFetchRequest(CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactPhoneNumbersKey])) {
+            try store.enumerateContactsWithFetchRequest(CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactPhoneNumbersKey, CNContactImageDataKey])) {
                 (contact, cursor) -> Void in
                 if(!contact.phoneNumbers.isEmpty){
                     if let phoneCN = contact.phoneNumbers[0].value as? CNPhoneNumber{
                         if let phoneSting = phoneCN.valueForKey("digits") as? String{
                             if let phone = Int(phoneSting){
-                                contactsArray.append(ModelContact(aName: contact.givenName + " " + contact.familyName, aPhoneNumber: phone))
+                                contactsArray.append(ModelContact(aName: contact.givenName + " " + contact.familyName, aPhoneNumber: phone, avatarData: contact.imageData))
                             }
                         }
                     }
