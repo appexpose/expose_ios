@@ -30,6 +30,6 @@ class InitialViewController: UIViewController {
     
     //MARK: - Go TabBar
     func goTabBar(){
-        print("Ir a tabBar")
+        performSegueWithIdentifier("showTabVC", sender: self)
     }
 }
