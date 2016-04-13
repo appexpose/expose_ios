@@ -17,14 +17,19 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.goTabBar), name:GlobalVariables.returnUpdateContactsNotification() , object: nil)
+        
         let contactsArray = ContactsUtils.importContactsFromPhone()
         UpdateContacts.updateContacts(contactsArray)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: GlobalVariables.returnUpdateContactsNotification(), object: nil)
     }
     
-    
+    //MARK: - Go TabBar
+    func goTabBar(){
+        print("Ir a tabBar")
+    }
 }

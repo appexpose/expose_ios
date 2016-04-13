@@ -32,7 +32,7 @@ class UpdateContacts{
                 if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: [NSJSONReadingOptions.MutableContainers]) as? NSDictionary {
                     if let resultCode = json.objectForKey("result") as? Int{
                         if(resultCode == 1){
-                            print("ok")
+                             NSNotificationCenter.defaultCenter().postNotificationName(GlobalVariables.returnUpdateContactsNotification(), object: nil)
                         }else{
                             if let erroCode = json.objectForKey("error_code") as? String{
                                 print(erroCode)

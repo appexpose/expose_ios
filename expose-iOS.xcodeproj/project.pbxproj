@@ -326,6 +326,7 @@
 				64B68D8C1CBEAD450033DD19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

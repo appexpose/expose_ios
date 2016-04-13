@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6F4F989BB17A274D68A21DEE019D3B9E745FBA2C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "24C410349B216B06A9031C0899CD1D5D3906DE65" : 0,
+    "6F4F989BB17A274D68A21DEE019D3B9E745FBA2C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7CC77311-3DC0-44E8-B5D0-0384599F2090",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "24C410349B216B06A9031C0899CD1D5D3906DE65" : "",
+    "6F4F989BB17A274D68A21DEE019D3B9E745FBA2C" : "expose-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "expose-iOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "expose-iOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/appexpose\/expose_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24C410349B216B06A9031C0899CD1D5D3906DE65"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/appexpose\/expose_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F4F989BB17A274D68A21DEE019D3B9E745FBA2C"
+    }
+  ]
+}

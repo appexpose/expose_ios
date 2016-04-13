@@ -17,4 +17,8 @@ class GlobalVariables{
     static func returnSystem() -> String{
         return "ios"
     }
+    
+    static func returnUpdateContactsNotification() -> String{
+        return "com.appexpose.notificationListUserRooms"
+    }
 }
