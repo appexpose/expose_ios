@@ -17,10 +17,12 @@ class InitialViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.goTabBar), name:GlobalVariables.returnUpdateContactsNotification() , object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.goTabBar), name:GlobalVariables.returnUpdateContactsNotification() , object: nil)
         
-        let contactsArray = ContactsUtils.importContactsFromPhone()
-        UpdateContacts.updateContacts(contactsArray)
+        //let contactsArray = ContactsUtils.importContactsFromPhone()
+        //UpdateContacts.updateContacts(contactsArray)
+        let aux = Countries.returnArrayCountries()
+        print(aux)
     }
     
     override func viewWillDisappear(animated: Bool) {

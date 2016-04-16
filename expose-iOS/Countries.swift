@@ -9,242 +9,246 @@
 import UIKit
 
 class Countries{
-    let countriesArray = ["Spain" : "0034",
-                          "United Kingdom" : "0044",
-                          "United States" : "001",
-                          "Japan" : "0081",
-                          "Canada" : "001",
-                          "China" : "0086",
-                          "France" : "0033",
-                          "Russia" : "007",
-                          "Germany" : "0049",
-                          "Afghanistan" : "0093",
-                          "Albania" : "00355",
-                          "Algeria" : "00213",
-                          "American Samoa" : "001684",
-                          "Andorra" : "00376",
-                          "Angola" : "00244",
-                          "Anguilla" : "001264",
-                          "Antigua and Barbuda" : "001268",
-                          "Argentina" : "0054",
-                          "Armenia" : "00374",
-                          "Aruba" : "00297",
-                          "Australia": "0061",
-                          "Austria" : "0043",
-                          "Azerbaijan" : "00994",
-                          "Bahamas" : "001242",
-                          "Bahrain" : "00973",
-                          "Bangladesh" : "00880",
-                          "Barbados" : "001246",
-                          "Belarus" : "00375",
-                          "Belgium" : "0032",
-                          "Belize" : "00501",
-                          "Benin" : "00229",
-                          "Bermuda" : "001441",
-                          "Bhutan" : "00975",
-                          "Bolivia" : "00591",
-                          "Bosnia and Herzegovina" : "00387",
-                          "Botswana" : "00267",
-                          "Brazil" : "0055",
-                          "British Indian Ocean Territory" : "00246",
-                          "British Virgin Islands" : "001284",
-                          "Brunei" : "00673",
-                          "Bulgaria" : "00359",
-                          "Burkina Faso" : "00226",
-                          "Burundi" : "00257",
-                          "Cambodia" : "00855",
-                          "Cameroon" : "00237",
-                          "Cape Verde" : "00238",
-                          "Caribbean Netherlands" : "00599",
-                          "Cayman Islands" : "001345",
-                          "Central African Republic" : "00236",
-                          "Chad" : "00235",
-                          "Chile" : "0056",
-                          "Colombia" : "0057",
-                          "Comoros" : "00269",
-                          "Congo" : "00243",
-                          "Congo2" : "00242",
-                          "Cook Islands" : "00682",
-                          "Costa Rica" : "00506",
-                          "Côte d’Ivoire" : "00225",
-                          "Croatia" : "00385",
-                          "Cuba" : "0053",
-                          "Curaçao" : "00599",
-                          "Cyprus" : "00357",
-                          "Czech Republic" : "00420",
-                          "Denmark" : "0045",
-                          "Djibouti" : "00253",
-                          "Dominica" : "001767",
-                          "Dominican Republic" : "001",
-                          "Ecuador" : "00593",
-                          "Egypt" : "0020",
-                          "El Salvador" : "00503",
-                          "Equatorial Guinea" : "00240",
-                          "Eritrea" : "00291",
-                          "Estonia" : "00372",
-                          "Ethiopia" : "00251",
-                          "Falkland Islands" : "00500",
-                          "Faroe Islands" : "00298",
-                          "Fiji" : "00679",
-                          "Finland" : "00358",
-                          "French Guiana" : "00594",
-                          "French Polynesia" : "00689",
-                          "Gabon" : "00241",
-                          "Gambia" : "00220",
-                          "Georgia" : "00995",
-                          "Ghana" : "00233",
-                          "Gibraltar" : "00350",
-                          "Greece" : "0030",
-                          "Greenland" : "00299",
-                          "Grenada" : "001473",
-                          "Guadeloupe" : "00590",
-                          "Guam" : "001671",
-                          "Guatemala" : "00502",
-                          "Guernsey" : "0044",
-                          "Guinea" : "00224",
-                          "Guinea-Bissau" : "00245",
-                          "Guyana" : "00592",
-                          "Haiti" : "00509",
-                          "Honduras" : "00504",
-                          "Hong Kong" : "00852",
-                          "Hungary" : "0036",
-                          "Iceland" : "00354",
-                          "India" : "0091",
-                          "Indonesia" : "0062",
-                          "Iran" : "0098",
-                          "Iraq" : "00964",
-                          "Ireland" : "00353",
-                          "Isle of Man" : "0044",
-                          "Israel" : "00972",
-                          "Italy" : "0039",
-                          "Jamaica" : "001876",
-                          "Jersey" : "0044",
-                          "Jordan" : "00962",
-                          "Kazakhstan" : "007",
-                          "Kenya" : "00254",
-                          "Kiribati" : "00686",
-                          "Kuwait" : "00965",
-                          "Kyrgyzstan" : "00996",
-                          "Laos" : "00856",
-                          "Latvia" : "00371",
-                          "Lebanon" : "00961",
-                          "Lesotho" : "00266",
-                          "Liberia" : "00231",
-                          "Libya" : "00218",
-                          "Liechtenstein" : "00423",
-                          "Lithuania" : "00370",
-                          "Luxembourg" : "00352",
-                          "Macau" : "00853",
-                          "Macedonia" : "00389",
-                          "Madagascar" : "00261",
-                          "Malawi" : "00265",
-                          "Malaysia" : "0060",
-                          "Maldives" : "00960",
-                          "Mali" : "00223",
-                          "Malta" : "00356",
-                          "Marshall Islands" : "00692",
-                          "Martinique" : "00596",
-                          "Mauritania" : "00222",
-                          "Mauritius" : "00230",
-                          "Mayotte" : "00262",
-                          "Mexico" : "0052",
-                          "Micronesia" : "00691",
-                          "Moldova" : "00373",
-                          "Monaco" : "00377",
-                          "Mongolia" : "00976",
-                          "Montenegro" : "00382",
-                          "Montserrat" : "001664",
-                          "Morocco" : "00212",
-                          "Mozambique" : "00258",
-                          "Myanmar" : "0095",
-                          "Namibia" : "00264",
-                          "Nauru" : "00674",
-                          "Nepal" : "00977",
-                          "Netherlands" : "0031",
-                          "New Caledonia" : "00687",
-                          "New Zealand" : "0064",
-                          "Nicaragua" : "00505",
-                          "Niger" : "00227",
-                          "Nigeria" : "00234",
-                          "Niue" : "00683",
-                          "Norfolk Island" : "00672",
-                          "North Korea" : "00850",
-                          "Northern Mariana Islands" : "001670",
-                          "Norway" : "0047",
-                          "Oman" : "00968",
-                          "Pakistan" : "0092",
-                          "Palau" : "00680",
-                          "Palestine" : "00970",
-                          "Panama" : "00507",
-                          "Papua New Guinea" : "00675",
-                          "Paraguay" : "00595",
-                          "Peru" : "0051",
-                          "Philippines" : "0063",
-                          "Poland" : "0048",
-                          "Portugal" : "00351",
-                          "Puerto Rico" : "001",
-                          "Qatar" : "00974",
-                          "Réunion" : "00262",
-                          "Romania" : "0040",
-                          "Rwanda" : "00250",
-                          "Saint Barthélemy" : "00590",
-                          "Saint Helena" : "00290",
-                          "Saint Kitts and Nevis" : "001869",
-                          "Saint Lucia" : "001758",
-                          "Saint Martin" : "00590",
-                          "Saint Pierre and Miquelon" : "00508",
-                          "Saint Vincent and the Grenadines" : "001784",
-                          "Samoa" : "00685",
-                          "San Marino" : "00378",
-                          "São Tomé and Príncipe" : "00239",
-                          "Saudi Arabia" : "00966",
-                          "Senegal" : "00221",
-                          "Serbia" : "00381",
-                          "Seychelles" : "00248",
-                          "Sierra Leone" : "00232",
-                          "Singapore" : "0065",
-                          "Sint Maarten" : "001721",
-                          "Slovakia" : "00421",
-                          "Slovenia" : "00386",
-                          "Solomon Islands" : "00677",
-                          "Somalia" : "00252",
-                          "South Africa" : "0027",
-                          "South Korea" : "0082",
-                          "South Sudan" : "00211",
-                          "Sri Lanka" : "0094",
-                          "Sudan" : "00249",
-                          "Suriname" : "00597",
-                          "Swaziland" : "00268",
-                          "Sweden" : "0046",
-                          "Switzerland" : "0041",
-                          "Syria" : "00963",
-                          "Taiwan" : "00886",
-                          "Tajikistan" : "00992",
-                          "Tanzania" : "00255",
-                          "Thailand" : "0066",
-                          "Timor-Leste" : "00670",
-                          "Togo" : "00228",
-                          "Tokelau" : "00690",
-                          "Tonga" : "00676",
-                          "Trinidad and Tobago" : "001868",
-                          "Tunisia" : "00216",
-                          "Turkey" : "0090",
-                          "Turkmenistan" : "00993",
-                          "Turks and Caicos Islands" : "001649",
-                          "Tuvalu" : "00688",
-                          "U.S. Virgin Islands" : "001340",
-                          "Uganda" : "00256",
-                          "Ukraine" : "00380",
-                          "United Arab Emirates" : "00971",
-                          "Uruguay" : "00598",
-                          "Uzbekistan" : "00998",
-                          "Vanuatu" : "00678",
-                          "Vatican City" : "0039",
-                          "Venezuela" : "0058",
-                          "Vietnam" : "0084",
-                          "Wallis and Futuna" : "00681",
-                          "Western Sahara" : "00212",
-                          "Yemen" : "00967",
-                          "Zambia" : "00260",
-                          "Zimbabwe" : "00263"]
+    static let countriesArray = NSLocalizedString("Spain", comment:"") + "::" + "0034" + "," +
+                           NSLocalizedString("United Kingdom", comment:"") + "::" + "0044" + "," +
+                           NSLocalizedString("United States", comment:"") + "::" + "001" + "," +
+                           NSLocalizedString("Japan", comment:"") + "::" + "0081" + "," +
+                           NSLocalizedString("Canada", comment:"") + "::" + "001" + "," +
+                           NSLocalizedString("China", comment:"") + "::" + "0086" + "," +
+                           NSLocalizedString("France", comment:"") + "::" + "0033" + "," +
+                           NSLocalizedString("Russia", comment:"") + "::" + "007" + "," +
+                           NSLocalizedString("Germany", comment:"") + "::" + "0049" + "," +
+                           NSLocalizedString("Afghanistan", comment:"") + "::" + "0093" + "," +
+                           NSLocalizedString("Albania", comment:"") + "::" + "00355" + "," +
+                           NSLocalizedString("Algeria", comment:"") + "::" + "00213" + "," +
+                           NSLocalizedString("American Samoa", comment:"") + "::" + "001684" + "," +
+                           NSLocalizedString("Andorra", comment:"") + "::" + "00376" + "," +
+                           NSLocalizedString("Angola", comment:"") + "::" + "00244" + "," +
+                           NSLocalizedString("Anguilla", comment:"") + "::" + "001264" + "," +
+                           NSLocalizedString("Antigua and Barbuda", comment:"") + "::" + "001268" + "," +
+                           NSLocalizedString("Argentina", comment:"") + "::" + "0054" + "," +
+                           NSLocalizedString("Armenia", comment:"") + "::" + "00374" + "," +
+                           NSLocalizedString("Aruba", comment:"") + "::" + "00297" + "," +
+                           NSLocalizedString("Australia", comment:"") + "::" + "0061" + "," +
+                           NSLocalizedString("Austria", comment:"") + "::" + "0043" + "," +
+                           NSLocalizedString("Azerbaijan", comment:"") + "::" + "00994" + "," +
+                           NSLocalizedString("Bahamas", comment:"") + "::" + "001242" + "," +
+                           NSLocalizedString("Bahrain", comment:"") + "::" + "00973" + "," +
+                           NSLocalizedString("Bangladesh", comment:"") + "::" + "00880" + "," +
+                           NSLocalizedString("Barbados", comment:"") + "::" + "001246" + "," +
+                           NSLocalizedString("Belarus", comment:"") + "::" + "00375" + "," +
+                           NSLocalizedString("Belgium", comment:"") + "::" + "0032" + "," +
+                           NSLocalizedString("Belize", comment:"") + "::" + "00501" + "," +
+                           NSLocalizedString("Benin", comment:"") + "::" + "00229" + "," +
+                           NSLocalizedString("Bermuda", comment:"") + "::" + "001441" + "," +
+                           NSLocalizedString("Bhutan", comment:"") + "::" + "00975" + "," +
+                           NSLocalizedString("Bolivia", comment:"") + "::" + "00591" + "," +
+                           NSLocalizedString("Bosnia and Herzegovina", comment:"") + "::" + "00387" + "," +
+                           NSLocalizedString("Botswana", comment:"") + "::" + "00267" + "," +
+                           NSLocalizedString("Brazil", comment:"") + "::" + "0055" + "," +
+                           NSLocalizedString("British Indian Ocean Territory", comment:"") + "::" + "00246" + "," +
+                           NSLocalizedString("British Virgin Islands", comment:"") + "::" + "001284" + "," +
+                           NSLocalizedString("Brunei", comment:"") + "::" + "00673" + "," +
+                           NSLocalizedString("Bulgaria", comment:"") + "::" + "00359" + "," +
+                           NSLocalizedString("Burkina Faso", comment:"") + "::" + "00226" + "," +
+                           NSLocalizedString("Burundi", comment:"") + "::" + "00257" + "," +
+                           NSLocalizedString("Cambodia", comment:"") + "::" + "00855" + "," +
+                           NSLocalizedString("Cameroon", comment:"") + "::" + "00237" + "," +
+                           NSLocalizedString("Cape Verde", comment:"") + "::" + "00238" + "," +
+                           NSLocalizedString("Caribbean Netherlands", comment:"") + "::" + "00599" + "," +
+                           NSLocalizedString("Cayman Islands", comment:"") + "::" + "001345" + "," +
+                           NSLocalizedString("Central African Republic", comment:"") + "::" + "00236" + "," +
+                           NSLocalizedString("Chad", comment:"") + "::" + "00235" + "," +
+                           NSLocalizedString("Chile", comment:"") + "::" + "0056" + "," +
+                           NSLocalizedString("Colombia", comment:"") + "::" + "0057" + "," +
+                           NSLocalizedString("Comoros", comment:"") + "::" + "00269" + "," +
+                           NSLocalizedString("Congo", comment:"") + "::" + "00243" + "," +
+                           NSLocalizedString("Congo2", comment:"") + "::" + "00242" + "," +
+                           NSLocalizedString("Cook Islands", comment:"") + "::" + "00682" + "," +
+                           NSLocalizedString("Costa Rica", comment:"") + "::" + "00506" + "," +
+                           NSLocalizedString("Côte d’Ivoire", comment:"") + "::" + "00225" + "," +
+                           NSLocalizedString("Croatia", comment:"") + "::" + "00385" + "," +
+                           NSLocalizedString("Cuba", comment:"") + "::" + "0053" + "," +
+                           NSLocalizedString("Curaçao", comment:"") + "::" + "00599" + "," +
+                           NSLocalizedString("Cyprus", comment:"") + "::" + "00357" + "," +
+                           NSLocalizedString("Czech Republic", comment:"") + "::" + "00420" + "," +
+                           NSLocalizedString("Denmark", comment:"") + "::" + "0045" + "," +
+                           NSLocalizedString("Djibouti", comment:"") + "::" + "00253" + "," +
+                           NSLocalizedString("Dominica", comment:"") + "::" + "001767" + "," +
+                           NSLocalizedString("Dominican Republic", comment:"") + "::" + "001" + "," +
+                           NSLocalizedString("Ecuador", comment:"") + "::" + "00593" + "," +
+                           NSLocalizedString("Egypt", comment:"") + "::" + "0020" + "," +
+                           NSLocalizedString("El Salvador", comment:"") + "::" + "00503" + "," +
+                           NSLocalizedString("Equatorial Guinea", comment:"") + "::" + "00240" + "," +
+                           NSLocalizedString("Eritrea", comment:"") + "::" + "00291" + "," +
+                           NSLocalizedString("Estonia", comment:"") + "::" + "00372" + "," +
+                           NSLocalizedString("Ethiopia", comment:"") + "::" + "00251" + "," +
+                           NSLocalizedString("Falkland Islands", comment:"") + "::" + "00500" + "," +
+                           NSLocalizedString("Faroe Islands", comment:"") + "::" + "00298" + "," +
+                           NSLocalizedString("Fiji", comment:"") + "::" + "00679" + "," +
+                           NSLocalizedString("Finland", comment:"") + "::" + "00358" + "," +
+                           NSLocalizedString("French Guiana", comment:"") + "::" + "00594" + "," +
+                           NSLocalizedString("French Polynesia", comment:"") + "::" + "00689" + "," +
+                           NSLocalizedString("Gabon", comment:"") + "::" + "00241" + "," +
+                           NSLocalizedString("Gambia", comment:"") + "::" + "00220" + "," +
+                           NSLocalizedString("Georgia", comment:"") + "::" + "00995" + "," +
+                           NSLocalizedString("Ghana", comment:"") + "::" + "00233" + "," +
+                           NSLocalizedString("Gibraltar", comment:"") + "::" + "00350" + "," +
+                           NSLocalizedString("Greece", comment:"") + "::" + "0030" + "," +
+                           NSLocalizedString("Greenland", comment:"") + "::" + "00299" + "," +
+                           NSLocalizedString("Grenada", comment:"") + "::" + "001473" + "," +
+                           NSLocalizedString("Guadeloupe", comment:"") + "::" + "00590" + "," +
+                           NSLocalizedString("Guam", comment:"") + "::" + "001671" + "," +
+                           NSLocalizedString("Guatemala", comment:"") + "::" + "00502" + "," +
+                           NSLocalizedString("Guernsey", comment:"") + "::" + "0044" + "," +
+                           NSLocalizedString("Guinea", comment:"") + "::" + "00224" + "," +
+                           NSLocalizedString("Guinea-Bissau", comment:"") + "::" + "00245" + "," +
+                           NSLocalizedString("Guyana", comment:"") + "::" + "00592" + "," +
+                           NSLocalizedString("Haiti", comment:"") + "::" + "00509" + "," +
+                           NSLocalizedString("Honduras", comment:"") + "::" + "00504" + "," +
+                           NSLocalizedString("Hong Kong", comment:"") + "::" + "00852" + "," +
+                           NSLocalizedString("Hungary", comment:"") + "::" + "0036" + "," +
+                           NSLocalizedString("Iceland", comment:"") + "::" + "00354" + "," +
+                           NSLocalizedString("India", comment:"") + "::" + "0091" + "," +
+                           NSLocalizedString("Indonesia", comment:"") + "::" + "0062" + "," +
+                           NSLocalizedString("Iran", comment:"") + "::" + "0098" + "," +
+                           NSLocalizedString("Iraq", comment:"") + "::" + "00964" + "," +
+                           NSLocalizedString("Ireland", comment:"") + "::" + "00353" + "," +
+                           NSLocalizedString("Isle of Man", comment:"") + "::" + "0044" + "," +
+                           NSLocalizedString("Israel", comment:"") + "::" + "00972" + "," +
+                           NSLocalizedString("Jamaica", comment:"") + "::" + "001876" + "," +
+                           NSLocalizedString("Jersey", comment:"") + "::" + "0044" + "," +
+                           NSLocalizedString("Jordan", comment:"") + "::" + "00962" + "," +
+                           NSLocalizedString("Kazakhstan", comment:"") + "::" + "007" + "," +
+                           NSLocalizedString("Kenya", comment:"") + "::" + "00254" + "," +
+                           NSLocalizedString("Kiribati", comment:"") + "::" + "00686" + "," +
+                           NSLocalizedString("Kuwait", comment:"") + "::" + "00965" + "," +
+                           NSLocalizedString("Kyrgyzstan", comment:"") + "::" + "00996" + "," +
+                           NSLocalizedString("Laos", comment:"") + "::" + "00856" + "," +
+                           NSLocalizedString("Latvia", comment:"") + "::" + "00371" + "," +
+                           NSLocalizedString("Lebanon", comment:"") + "::" + "00961" + "," +
+                           NSLocalizedString("Lesotho", comment:"") + "::" + "00266" + "," +
+                           NSLocalizedString("Liberia", comment:"") + "::" + "00231" + "," +
+                           NSLocalizedString("Libya", comment:"") + "::" + "00218" + "," +
+                           NSLocalizedString("Liechtenstein", comment:"") + "::" + "00423" + "," +
+                           NSLocalizedString("Lithuania", comment:"") + "::" + "00370" + "," +
+                           NSLocalizedString("Luxembourg", comment:"") + "::" + "00352" + "," +
+                           NSLocalizedString("Macau", comment:"") + "::" + "00853" + "," +
+                           NSLocalizedString("Macedonia", comment:"") + "::" + "00389" + "," +
+                           NSLocalizedString("Madagascar", comment:"") + "::" + "00261" + "," +
+                           NSLocalizedString("Malawi", comment:"") + "::" + "00265" + "," +
+                           NSLocalizedString("Malaysia", comment:"") + "::" + "0060" + "," +
+                           NSLocalizedString("Maldives", comment:"") + "::" + "00960" + "," +
+                           NSLocalizedString("Mali", comment:"") + "::" + "00223" + "," +
+                           NSLocalizedString("Malta", comment:"") + "::" + "00356" + "," +
+                           NSLocalizedString("Marshall Islands", comment:"") + "::" + "00692" + "," +
+                           NSLocalizedString("Martinique", comment:"") + "::" + "00596" + "," +
+                           NSLocalizedString("Mauritania", comment:"") + "::" + "00222" + "," +
+                           NSLocalizedString("Mauritius", comment:"") + "::" + "00230" + "," +
+                           NSLocalizedString("Mayotte", comment:"") + "::" + "00262" + "," +
+                           NSLocalizedString("Mexico", comment:"") + "::" + "0052" + "," +
+                           NSLocalizedString("Micronesia", comment:"") + "::" + "00691" + "," +
+                           NSLocalizedString("Moldova", comment:"") + "::" + "00373" + "," +
+                           NSLocalizedString("Monaco", comment:"") + "::" + "00377" + "," +
+                           NSLocalizedString("Mongolia", comment:"") + "::" + "00976" + "," +
+                           NSLocalizedString("Montenegro", comment:"") + "::" + "00382" + "," +
+                           NSLocalizedString("Montserrat", comment:"") + "::" + "001664" + "," +
+                           NSLocalizedString("Morocco", comment:"") + "::" + "00212" + "," +
+                           NSLocalizedString("Mozambique", comment:"") + "::" + "00258" + "," +
+                           NSLocalizedString("Myanmar", comment:"") + "::" + "0095" + "," +
+                           NSLocalizedString("Namibia", comment:"") + "::" + "00264" + "," +
+                           NSLocalizedString("Nauru", comment:"") + "::" + "00674" + "," +
+                           NSLocalizedString("Nepal", comment:"") + "::" + "00977" + "," +
+                           NSLocalizedString("Netherlands", comment:"") + "::" + "0031" + "," +
+                           NSLocalizedString("New Caledonia", comment:"") + "::" + "00687" + "," +
+                           NSLocalizedString("New Zealand", comment:"") + "::" + "0064" + "," +
+                           NSLocalizedString("Nicaragua", comment:"") + "::" + "00505" + "," +
+                           NSLocalizedString("Niger", comment:"") + "::" + "00227" + "," +
+                           NSLocalizedString("Nigeria", comment:"") + "::" + "00234" + "," +
+                           NSLocalizedString("Niue", comment:"") + "::" + "00683" + "," +
+                           NSLocalizedString("Norfolk Island", comment:"") + "::" + "00672" + "," +
+                           NSLocalizedString("North Korea", comment:"") + "::" + "00850" + "," +
+                           NSLocalizedString("Northern Mariana Islands", comment:"") + "::" + "001670" + "," +
+                           NSLocalizedString("Norway", comment:"") + "::" + "0047" + "," +
+                           NSLocalizedString("Oman", comment:"") + "::" + "00968" + "," +
+                           NSLocalizedString("Pakistan", comment:"") + "::" + "0092" + "," +
+                           NSLocalizedString("Palau", comment:"") + "::" + "00680" + "," +
+                           NSLocalizedString("Palestine", comment:"") + "::" + "00970" + "," +
+                           NSLocalizedString("Panama", comment:"") + "::" + "00507" + "," +
+                           NSLocalizedString("Papua New Guinea", comment:"") + "::" + "00675" + "," +
+                           NSLocalizedString("Paraguay", comment:"") + "::" + "00595" + "," +
+                           NSLocalizedString("Peru", comment:"") + "::" + "0051" + "," +
+                           NSLocalizedString("Philippines", comment:"") + "::" + "0063" + "," +
+                           NSLocalizedString("Poland", comment:"") + "::" + "0048" + "," +
+                           NSLocalizedString("Portugal", comment:"") + "::" + "00351" + "," +
+                           NSLocalizedString("Puerto Rico", comment:"") + "::" + "001" + "," +
+                           NSLocalizedString("Qatar", comment:"") + "::" + "00974" + "," +
+                           NSLocalizedString("Réunion", comment:"") + "::" + "00262" + "," +
+                           NSLocalizedString("Romania", comment:"") + "::" + "0040" + "," +
+                           NSLocalizedString("Rwanda", comment:"") + "::" + "00250" + "," +
+                           NSLocalizedString("Saint Barthélemy", comment:"") + "::" + "00590" + "," +
+                           NSLocalizedString("Saint Helena", comment:"") + "::" + "00290" + "," +
+                           NSLocalizedString("Saint Kitts and Nevis", comment:"") + "::" + "001869" + "," +
+                           NSLocalizedString("Saint Lucia", comment:"") + "::" + "001758" + "," +
+                           NSLocalizedString("Saint Martin", comment:"") + "::" + "00590" + "," +
+                           NSLocalizedString("Saint Pierre and Miquelon", comment:"") + "::" + "00508" + "," +
+                           NSLocalizedString("Saint Vincent and the Grenadines", comment:"") + "::" + "001784" + "," +
+                           NSLocalizedString("Samoa", comment:"") + "::" + "00685" + "," +
+                           NSLocalizedString("San Marino", comment:"") + "::" + "00378" + "," +
+                           NSLocalizedString("São Tomé and Príncipe", comment:"") + "::" + "00239" + "," +
+                           NSLocalizedString("Saudi Arabia", comment:"") + "::" + "00966" + "," +
+                           NSLocalizedString("Senegal", comment:"") + "::" + "00221" + "," +
+                           NSLocalizedString("Serbia", comment:"") + "::" + "00381" + "," +
+                           NSLocalizedString("Seychelles", comment:"") + "::" + "00248" + "," +
+                           NSLocalizedString("Sierra Leone", comment:"") + "::" + "00232" + "," +
+                           NSLocalizedString("Singapore", comment:"") + "::" + "0065" + "," +
+                           NSLocalizedString("Sint Maarten", comment:"") + "::" + "001721" + "," +
+                           NSLocalizedString("Slovakia", comment:"") + "::" + "00421" + "," +
+                           NSLocalizedString("Slovenia", comment:"") + "::" + "00386" + "," +
+                           NSLocalizedString("Solomon Islands", comment:"") + "::" + "00677" + "," +
+                           NSLocalizedString("Somalia", comment:"") + "::" + "00252" + "," +
+                           NSLocalizedString("South Africa", comment:"") + "::" + "0027" + "," +
+                           NSLocalizedString("South Korea", comment:"") + "::" + "0082" + "," +
+                           NSLocalizedString("South Sudan", comment:"") + "::" + "00211" + "," +
+                           NSLocalizedString("Sri Lanka", comment:"") + "::" + "0094" + "," +
+                           NSLocalizedString("Sudan", comment:"") + "::" + "00249" + "," +
+                           NSLocalizedString("Suriname", comment:"") + "::" + "00597" + "," +
+                           NSLocalizedString("Swaziland", comment:"") + "::" + "00268" + "," +
+                           NSLocalizedString("Sweden", comment:"") + "::" + "0046" + "," +
+                           NSLocalizedString("Switzerland", comment:"") + "::" + "0041" + "," +
+                           NSLocalizedString("Syria", comment:"") + "::" + "00963" + "," +
+                           NSLocalizedString("Taiwan", comment:"") + "::" + "00886" + "," +
+                           NSLocalizedString("Tajikistan", comment:"") + "::" + "00992" + "," +
+                           NSLocalizedString("Tanzania", comment:"") + "::" + "00255" + "," +
+                           NSLocalizedString("Thailand", comment:"") + "::" + "0066" + "," +
+                           NSLocalizedString("Timor-Leste", comment:"") + "::" + "00670" + "," +
+                           NSLocalizedString("Togo", comment:"") + "::" + "00228" + "," +
+                           NSLocalizedString("Tokelau", comment:"") + "::" + "00690" + "," +
+                           NSLocalizedString("Tonga", comment:"") + "::" + "00676" + "," +
+                           NSLocalizedString("Trinidad and Tobago", comment:"") + "::" + "001868" + "," +
+                           NSLocalizedString("Tunisia", comment:"") + "::" + "00216" + "," +
+                           NSLocalizedString("Turkey", comment:"") + "::" + "0090" + "," +
+                           NSLocalizedString("Turkmenistan", comment:"") + "::" + "00993" + "," +
+                           NSLocalizedString("Turks and Caicos Islands", comment:"") + "::" + "001649" + "," +
+                           NSLocalizedString("Tuvalu", comment:"") + "::" + "00688" + "," +
+                           NSLocalizedString("U.S. Virgin Islands", comment:"") + "::" + "001340" + "," +
+                           NSLocalizedString("Uganda", comment:"") + "::" + "00256" + "," +
+                           NSLocalizedString("Ukraine", comment:"") + "::" + "00380" + "," +
+                           NSLocalizedString("United Arab Emirates", comment:"") + "::" + "00971" + "," +
+                           NSLocalizedString("Uruguay", comment:"") + "::" + "00598" + "," +
+                           NSLocalizedString("Uzbekistan", comment:"") + "::" + "00998" + "," +
+                           NSLocalizedString("Vanuatu", comment:"") + "::" + "00678" + "," +
+                           NSLocalizedString("Vatican City", comment:"") + "::" + "0039" + "," +
+                           NSLocalizedString("Venezuela", comment:"") + "::" + "0058" + "," +
+                           NSLocalizedString("Vietnam", comment:"") + "::" + "0084" + "," +
+                           NSLocalizedString("Wallis and Futuna", comment:"") + "::" + "00681" + "," +
+                           NSLocalizedString("Western Sahara", comment:"") + "::" + "00212" + "," +
+                           NSLocalizedString("Yemen", comment:"") + "::" + "00967" + "," +
+                           NSLocalizedString("Zambia", comment:"") + "::" + "00260" + "," +
+                           NSLocalizedString("Zimbabwe", comment:"") + "::" + "00263"
+    
+    //MARK: - Return ArrayCountries
+    static func returnArrayCountries() -> [String]{
+        return countriesArray.componentsSeparatedByString(",")
+    }
 }
