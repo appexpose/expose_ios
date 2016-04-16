@@ -9,7 +9,7 @@
 import UIKit
 import Contacts
 
-class InitialViewController: UIViewController {
+class InitialViewController: BaseViewController {
     
     //MARK: - Variables
     

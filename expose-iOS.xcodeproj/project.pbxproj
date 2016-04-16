@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643E2BE11CC24554002DB3DC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E2BE01CC24554002DB3DC /* BaseViewController.swift */; };
+		643E2BE31CC24666002DB3DC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E2BE21CC24666002DB3DC /* Colors.swift */; };
 		64B68D7C1CBEAD450033DD19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B68D7B1CBEAD450033DD19 /* AppDelegate.swift */; };
 		64B68D811CBEAD450033DD19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B68D7F1CBEAD450033DD19 /* Main.storyboard */; };
 		64B68D831CBEAD450033DD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64B68D821CBEAD450033DD19 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		643E2BE01CC24554002DB3DC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		643E2BE21CC24666002DB3DC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		64B68D781CBEAD450033DD19 /* expose-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expose-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B68D7B1CBEAD450033DD19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B68D801CBEAD450033DD19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643E2BE41CC24C1C002DB3DC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				64B68DBB1CBECF390033DD19 /* ContactsViewController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 		64B68D6F1CBEAD450033DD19 = {
 			isa = PBXGroup;
 			children = (
@@ -82,8 +94,9 @@
 		64B68D8D1CBEAD5D0033DD19 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				643E2BE01CC24554002DB3DC /* BaseViewController.swift */,
 				64B68D8E1CBEAD750033DD19 /* InitialViewController.swift */,
-				64B68DBB1CBECF390033DD19 /* ContactsViewController.swift */,
+				643E2BE41CC24C1C002DB3DC /* TabBar */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -101,6 +114,7 @@
 			children = (
 				64B68D941CBEBC3A0033DD19 /* ContactsUtils.swift */,
 				64B68D991CBEBF8F0033DD19 /* GlobalVariables.swift */,
+				643E2BE21CC24666002DB3DC /* Colors.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -186,10 +200,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B68DBF1CBECFA50033DD19 /* ListContacts.swift in Sources */,
+				643E2BE31CC24666002DB3DC /* Colors.swift in Sources */,
 				64B68D9A1CBEBF8F0033DD19 /* GlobalVariables.swift in Sources */,
 				64B68DBC1CBECF390033DD19 /* ContactsViewController.swift in Sources */,
 				64B68D7C1CBEAD450033DD19 /* AppDelegate.swift in Sources */,
 				64B68D921CBEB2370033DD19 /* ModelContact.swift in Sources */,
+				643E2BE11CC24554002DB3DC /* BaseViewController.swift in Sources */,
 				64B68D951CBEBC3A0033DD19 /* ContactsUtils.swift in Sources */,
 				64B68D971CBEBEF20033DD19 /* UpdateContacts.swift in Sources */,
 				64B68D8F1CBEAD750033DD19 /* InitialViewController.swift in Sources */,
