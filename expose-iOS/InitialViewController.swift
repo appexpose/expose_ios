@@ -13,16 +13,15 @@ class InitialViewController: BaseViewController {
     
     //MARK: - Variables
     
-    //MARK: - LifeCicle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.goTabBar), name:GlobalVariables.returnUpdateContactsNotification() , object: nil)
+    //MARK: - LifeCicle    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.goTabBar), name:GlobalVariables.returnUpdateContactsNotification() , object: nil)
         
         //let contactsArray = ContactsUtils.importContactsFromPhone()
         //UpdateContacts.updateContacts(contactsArray)
-        let aux = Countries.returnArrayCountries()
-        print(aux)
+        
+        performSegueWithIdentifier("selectCountrySegue", sender: self)
     }
     
     override func viewWillDisappear(animated: Bool) {

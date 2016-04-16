@@ -23,6 +23,8 @@
 		64E6F6061CC2505B008876A5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E6F6051CC2505B008876A5 /* Alamofire.framework */; };
 		64E6F6091CC251F4008876A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64E6F60B1CC251F4008876A5 /* Localizable.strings */; };
 		64E6F6101CC25990008876A5 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E6F60F1CC25990008876A5 /* Countries.swift */; };
+		64F6EAB81CC2CF5500B3054E /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6EAB71CC2CF5500B3054E /* SelectCountryViewController.swift */; };
+		64F6EABA1CC2D28000B3054E /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6EAB91CC2D28000B3054E /* CountryTableViewCell.swift */; };
 		CECCB81ADB6F37BCFC64E850 /* Pods_expose_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08313B68EF3E71D7E37DC4E5 /* Pods_expose_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		64E6F60A1CC251F4008876A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64E6F60E1CC25211008876A5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64E6F60F1CC25990008876A5 /* Countries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		64F6EAB71CC2CF5500B3054E /* SelectCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
+		64F6EAB91CC2D28000B3054E /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		6811402679BD04CE04FF3F1E /* Pods-expose-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expose-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-expose-iOS/Pods-expose-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C2C57E989C4DDDA3FCDAAB51 /* Pods-expose-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expose-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-expose-iOS/Pods-expose-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,10 +110,9 @@
 				64B68D931CBEBC260033DD19 /* Utils */,
 				64B68D901CBEB2230033DD19 /* Models */,
 				64B68D8D1CBEAD5D0033DD19 /* Controllers */,
+				64F6EABC1CC2D29700B3054E /* Views */,
 				64B68D7B1CBEAD450033DD19 /* AppDelegate.swift */,
-				64B68D7F1CBEAD450033DD19 /* Main.storyboard */,
 				64B68D821CBEAD450033DD19 /* Assets.xcassets */,
-				64B68D841CBEAD450033DD19 /* LaunchScreen.storyboard */,
 				64B68D871CBEAD450033DD19 /* Info.plist */,
 				64E6F60B1CC251F4008876A5 /* Localizable.strings */,
 			);
@@ -121,6 +124,7 @@
 			children = (
 				643E2BE01CC24554002DB3DC /* BaseViewController.swift */,
 				64B68D8E1CBEAD750033DD19 /* InitialViewController.swift */,
+				64F6EAB71CC2CF5500B3054E /* SelectCountryViewController.swift */,
 				643E2BE41CC24C1C002DB3DC /* TabBar */,
 			);
 			name = Controllers;
@@ -152,6 +156,24 @@
 				64B68DBE1CBECFA50033DD19 /* ListContacts.swift */,
 			);
 			name = WS;
+			sourceTree = "<group>";
+		};
+		64F6EABB1CC2D28600B3054E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64F6EAB91CC2D28000B3054E /* CountryTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		64F6EABC1CC2D29700B3054E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				64F6EABB1CC2D28600B3054E /* Cells */,
+				64B68D7F1CBEAD450033DD19 /* Main.storyboard */,
+				64B68D841CBEAD450033DD19 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		D0D95DDB4D34B12A7533BF80 /* Pods */ = {
@@ -295,7 +317,9 @@
 				64B68D7C1CBEAD450033DD19 /* AppDelegate.swift in Sources */,
 				64B68D921CBEB2370033DD19 /* ModelContact.swift in Sources */,
 				643E2BE11CC24554002DB3DC /* BaseViewController.swift in Sources */,
+				64F6EABA1CC2D28000B3054E /* CountryTableViewCell.swift in Sources */,
 				64B68D951CBEBC3A0033DD19 /* ContactsUtils.swift in Sources */,
+				64F6EAB81CC2CF5500B3054E /* SelectCountryViewController.swift in Sources */,
 				64B68D971CBEBEF20033DD19 /* UpdateContacts.swift in Sources */,
 				64B68D8F1CBEAD750033DD19 /* InitialViewController.swift in Sources */,
 			);
