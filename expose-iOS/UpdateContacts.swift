@@ -10,7 +10,7 @@ import Foundation
 
 class UpdateContacts{
 
-    static func updateContacts(contactsArray:[ModelContact]){
+    /*static func updateContacts(contactsArray:[ModelContact]){
         let urlServidor = "http://www.appexpose.com/server/1.0.1/models/model.php"
         var numbersString = ""
         for contact in contactsArray{
@@ -45,5 +45,7 @@ class UpdateContacts{
             }
         }
         updateContactTaks.resume()
+    }*/
+    static func updateContacts(contactsArray:[ModelContact]){
     }
 }

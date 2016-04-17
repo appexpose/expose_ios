@@ -32,26 +32,7 @@ class LogInViewController: BaseViewController {
             if let json = response.result.value{
                 if let userJSON = json.objectForKey("user") as? NSDictionary{
                     //print(userJSON)
-                    var deviceKey = ""
-                    var fullName = ""
-                    var phone = ""
-                    var prefix = ""
-                    var userKey = ""
-                    if let aDeviceKey = userJSON.objectForKey("deviceKey") as? String{
-                        deviceKey = aDeviceKey
-                    }
-                    if let aFullName = userJSON.objectForKey("fullName") as? String{
-                        fullName = aFullName
-                    }
-                    if let aPhone = userJSON.objectForKey("phone") as? String{
-                        phone = aPhone
-                    }
-                    if let aPrefix = userJSON.objectForKey("prefix") as? String{
-                        prefix = aPrefix
-                    }
-                    if let anUserKey = userJSON.objectForKey("userKey") as? String{
-                        userKey = anUserKey
-                    }
+                    _=User(userJSON: userJSON)
                 }else if let codError = json.objectForKey("code") as? String, messageError = json.objectForKey("message") as? String{
                     print(codError)
                     print(messageError)

@@ -38,7 +38,7 @@ class ContactsUtils{
                     if let phoneCN = contact.phoneNumbers[0].value as? CNPhoneNumber{
                         if let phoneSting = phoneCN.valueForKey("digits") as? String{
                             if let phone = Int(phoneSting){
-                                contactsArray.append(ModelContact(aName: contact.givenName + " " + contact.familyName, aPhoneNumber: phone, avatarData: contact.imageData))
+                                contactsArray.append(ModelContact(aName: contact.givenName + " " + contact.familyName, aPhoneNumber: "\(phone)", avatarData: contact.imageData))
                             }
                         }
                     }

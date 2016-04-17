@@ -11,13 +11,13 @@ import UIKit
 class ModelContact{
     
     var name = ""
-    var phoneNumber = 0
+    var phoneNumber = ""
     var commentsAmount = 0
     var lastContent = ""
     var rating = 0
     var avatar: UIImage?
     
-    convenience init(aName:String, aPhoneNumber: Int, avatarData: NSData?){
+    convenience init(aName:String, aPhoneNumber: String, avatarData: NSData?){
         self.init()
         name = aName
         phoneNumber = aPhoneNumber
