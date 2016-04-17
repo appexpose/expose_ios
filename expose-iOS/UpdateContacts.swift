@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class UpdateContacts{
 
@@ -47,5 +48,20 @@ class UpdateContacts{
         updateContactTaks.resume()
     }*/
     static func updateContacts(contactsArray:[ModelContact]){
+        for contact in contactsArray{
+            var phone = ""
+            if(contact.phoneNumber.substringWithRange(contact.phoneNumber.startIndex ..< contact.phoneNumber.startIndex.advancedBy(1)) == "+" || contact.phoneNumber.substringWithRange(contact.phoneNumber.startIndex ..< contact.phoneNumber.startIndex.advancedBy(2)) == "00"){
+                phone = contact.phoneNumber
+            }else{
+                phone = User.returnUserData()!.prefix + contact.phoneNumber
+            }
+            let params = ["phone": phone, "fullName": contact.name]
+            Alamofire.request(.POST, GlobalVariables.returnUrlREST() + "/users/\(User.returnUserData()!.userKey)/contacts", parameters: params).responseJSON { (response) in
+                print(response)
+                if let json = response.result.value{
+                    print(json)
+                }
+            }
+        }
     }
 }

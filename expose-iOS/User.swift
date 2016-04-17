@@ -5,7 +5,7 @@ public class User: _User {
 
 	//Convenience init
     convenience init(userJSON:NSDictionary){
-        self.init(managedObjectContext:MMGCoreDataStack2(modelName: "Model").context)
+        self.init(managedObjectContext:coreDataStack.context)
         if let aDeviceKey = userJSON.objectForKey("deviceKey") as? String{
             deviceKey = aDeviceKey
         }
@@ -21,7 +21,7 @@ public class User: _User {
         if let anUserKey = userJSON.objectForKey("userKey") as? String{
             userKey = anUserKey
         }
-        MMGCoreDataStack2(modelName: "Model").saveContext()
+        coreDataStack.saveContext()
     }
     
     //MARK: - Return user data
@@ -29,7 +29,7 @@ public class User: _User {
         let request = NSFetchRequest(entityName: User.entityName())
         request.returnsObjectsAsFaults = false
         do{
-            let results = try MMGCoreDataStack2(modelName: "Model").context.executeFetchRequest(request) as! [User]
+            let results = try coreDataStack.context.executeFetchRequest(request) as! [User]
             if let user = results.first{
                 return ModelUser(model: user)
             }else{

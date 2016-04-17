@@ -8,6 +8,8 @@
 
 import Foundation
 
+var coreDataStack = MMGCoreDataStack2(modelName: "Model")
+
 class GlobalVariables{
     
     static func returnUrlREST() -> String{

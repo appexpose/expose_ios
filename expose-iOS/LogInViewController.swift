@@ -33,6 +33,8 @@ class LogInViewController: BaseViewController {
                 if let userJSON = json.objectForKey("user") as? NSDictionary{
                     //print(userJSON)
                     _=User(userJSON: userJSON)
+                    let contactsArray = ContactsUtils.importContactsFromPhone()
+                    UpdateContacts.updateContacts(contactsArray)
                 }else if let codError = json.objectForKey("code") as? String, messageError = json.objectForKey("message") as? String{
                     print(codError)
                     print(messageError)
