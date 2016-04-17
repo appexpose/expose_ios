@@ -13,15 +13,25 @@ class SelectCountryViewController: BaseViewController, UITableViewDataSource, UI
     //MARK: - Variables
     let countriesArray = Countries.returnArrayCountries()
     let countryCellIdentifier = "countryCellIdentifier"
+    let loginSegue = "loginSegue"
+    var countryPrefix = ""
     
     //MARK: - Outlets
     @IBOutlet weak var myTable: UITableView!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    
+    //MARK: - Actions
+    @IBAction func nextButtonPress(sender: AnyObject) {
+        performSegueWithIdentifier(loginSegue, sender: self)
+    }
+    
     
     //MARK: - LifeCycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
     
+    //MARK: - TableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countriesArray.count
     }
@@ -40,7 +50,18 @@ class SelectCountryViewController: BaseViewController, UITableViewDataSource, UI
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(countryPrefix.isEmpty){
+            nextButton.enabled = true
+        }
         let country = countriesArray[indexPath.row].componentsSeparatedByString("::")
-        print(country.last!)
+        countryPrefix = country.last!
+    }
+    
+    //MARK: - PrepareForSegue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == loginSegue){
+            let loginVC = segue.destinationViewController as! LogInViewController
+            loginVC.prefixCountry = countryPrefix
+        }
     }
 }

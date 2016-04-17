@@ -10,12 +10,20 @@ import Foundation
 
 class GlobalVariables{
     
+    static func returnUrlREST() -> String{
+        return "http://expose-server-rest.azurewebsites.net"
+    }
+    
     static func returnDeviceKey()-> String{
         return "111111"
     }
     
     static func returnSystem() -> String{
         return "ios"
+    }
+    
+    static func returnVersion() -> String{
+        return "1.0"
     }
     
     static func returnUpdateContactsNotification() -> String{
