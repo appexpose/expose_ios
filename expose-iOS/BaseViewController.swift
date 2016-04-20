@@ -17,6 +17,7 @@ class BaseViewController: UIViewController {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         let barButtonAppearence = UIBarButtonItem.appearance()
         barButtonAppearence.tintColor = UIColor.whiteColor()
+        self.tabBarController?.tabBar.tintColor = Colors.returnGreenExpose()
     }
     
     
