@@ -18,28 +18,26 @@ class LogInViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = Colors.returnGreenExpose()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.goTabBar), name:GlobalVariables.returnAddContactsNotification() , object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        signUpUser()
+        SignUp.signUpUser(prefixCountry)
     }
- 
-    //MARK: - SignUp User
-    func signUpUser(){
-        let params = ["deviceKey" : GlobalVariables.returnDeviceKey(), "prefix" : prefixCountry, "system" : GlobalVariables.returnSystem(), "version": GlobalVariables.returnVersion() ]
-        Alamofire.request(.POST, GlobalVariables.returnUrlREST() + "/users", parameters: params).responseJSON { (response) in
-            if let json = response.result.value{
-                if let userJSON = json.objectForKey("user") as? NSDictionary{
-                    //print(userJSON)
-                    _=User(userJSON: userJSON)
-                    let contactsArray = ContactsUtils.importContactsFromPhone()
-                    UpdateContacts.updateContacts(contactsArray)
-                }else if let codError = json.objectForKey("code") as? String, messageError = json.objectForKey("message") as? String{
-                    print(codError)
-                    print(messageError)
-                }
-            }
-        }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: GlobalVariables.returnAddContactsNotification(), object: nil)
     }
-}
+    
+    //MARK: - Utils
+    func goTabBar(){
+        performSegueWithIdentifier("showTabsLogin", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let tabBar = segue.destinationViewController as? UITabBarController
+        tabBar?.selectedIndex = 1
+    }
+ }

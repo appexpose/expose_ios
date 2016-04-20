@@ -11,44 +11,43 @@ import Contacts
 
 class ContactsUtils{
     
-    static func importContactsFromPhone() -> [ModelContact]{
-        //MARK: - Variables
-        var contactsArray = [ModelContact]()
+    static func importContactsFromPhone(){
         
         let store = CNContactStore()
         
         if CNContactStore.authorizationStatusForEntityType(.Contacts) == .NotDetermined {
             store.requestAccessForEntityType(.Contacts, completionHandler: { (authorized: Bool, error: NSError?) -> Void in
                 if authorized {
-                    contactsArray =  self.retrieveContactsWithStore(store)
+                    self.retrieveContactsWithStore(store)
                 }
             })
         } else if CNContactStore.authorizationStatusForEntityType(.Contacts) == .Authorized {
-            contactsArray = self.retrieveContactsWithStore(store)
+            self.retrieveContactsWithStore(store)
         }
-        return contactsArray
     }
     
-    static func retrieveContactsWithStore(store: CNContactStore) -> [ModelContact] {
-        var contactsArray = [ModelContact]()
+    static func retrieveContactsWithStore(store: CNContactStore){
         do {
+            Contact.deleteAllContacts()
             try store.enumerateContactsWithFetchRequest(CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactPhoneNumbersKey, CNContactImageDataKey])) {
                 (contact, cursor) -> Void in
                 if(!contact.phoneNumbers.isEmpty){
                     if let phoneCN = contact.phoneNumbers[0].value as? CNPhoneNumber{
-                        if let phoneSting = phoneCN.valueForKey("digits") as? String{
-                            if let phone = Int(phoneSting){
-                                contactsArray.append(ModelContact(aName: contact.givenName + " " + contact.familyName, aPhoneNumber: "\(phone)", avatarData: contact.imageData))
+                        if let phoneString = phoneCN.valueForKey("digits") as? String{
+                            var phone = ""
+                            if(phoneString.substringWithRange(phoneString.startIndex ..< phoneString.startIndex.advancedBy(1)) == "+" || phoneString.substringWithRange(phoneString.startIndex ..< phoneString.startIndex.advancedBy(2)) == "00"){
+                                    phone = phoneString
+                            }else{
+                                phone = User.returnUserData()!.prefix + phoneString
                             }
+                            _=Contact(aFullName: contact.givenName + " " + contact.familyName, phoneNumber: "\(phone)", avatarData: contact.imageData)
                         }
                     }
                 }
             }
-            return contactsArray
         }
         catch{
             print("Handle the error please")
-            return contactsArray
         }
     }
 }

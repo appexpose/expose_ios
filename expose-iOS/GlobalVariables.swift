@@ -17,7 +17,7 @@ class GlobalVariables{
     }
     
     static func returnDeviceKey()-> String{
-        return "111111"
+        return "7777777"
     }
     
     static func returnSystem() -> String{
@@ -28,7 +28,15 @@ class GlobalVariables{
         return "1.0"
     }
     
-    static func returnUpdateContactsNotification() -> String{
-        return "com.appexpose.notificationListUserRooms"
+    static func returnAddContactsNotification() -> String{
+        return "com.appexpose.notificationAddContacts"
+    }
+    
+    static func returnLonginNotification() -> String{
+        return "com.appexpose.notificationLogIn"
+    }
+    
+    static func returnListContactsNotification() -> String{
+        return "com.appexpose.notificationListContacts"
     }
 }

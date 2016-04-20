@@ -10,19 +10,40 @@ import UIKit
 
 class ModelContact{
     
-    var name = ""
+    var id = -1
+    var fullName = ""
     var phoneNumber = ""
     var commentsAmount = 0
-    var lastContent = ""
     var rating = 0
     var avatar: UIImage?
+    var notify = false
+    var userKey = ""
     
-    convenience init(aName:String, aPhoneNumber: String, avatarData: NSData?){
+    convenience init(model:Contact){
         self.init()
-        name = aName
-        phoneNumber = aPhoneNumber
-        if let dataImage = avatarData{
+        if let aFullName = model.fullName{
+            fullName = aFullName
+        }
+        if let aPhoneNumber = model.phone{
+            phoneNumber = aPhoneNumber
+        }
+        if let dataImage = model.avatar{
             avatar = UIImage(data: dataImage)
+        }
+        if let anId = model.id?.integerValue{
+            id = anId
+        }
+        if let aComment = model.commetnsAmount?.integerValue{
+            commentsAmount = aComment
+        }
+        if let aRating = model.rating?.integerValue{
+            rating = aRating
+        }
+        if let aNotify = model.notify as? Bool{
+            notify = aNotify
+        }
+        if let anUserKey = model.userKey{
+            userKey = anUserKey
         }
     }
 }

@@ -40,4 +40,23 @@ public class User: _User {
             return nil
         }
     }
+    
+    //MARK: - Delete user
+    static func deleteUser(){
+        let request = NSFetchRequest(entityName: User.entityName())
+        request.returnsObjectsAsFaults = false
+        do{
+            let allConversations = try coreDataStack.context.executeFetchRequest(request)
+        
+            if allConversations.count > 0 {
+            
+                for result: AnyObject in allConversations{
+                coreDataStack.context.deleteObject(result as! NSManagedObject)
+                }
+                coreDataStack.saveContext()
+            }
+        }catch let error as NSError{
+            print(error.localizedDescription)
+        }
+    }
 }

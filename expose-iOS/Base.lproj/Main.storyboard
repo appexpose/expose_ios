@@ -186,6 +186,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.36470588240000001" green="0.75294117650000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="65d-HX-oXd" kind="presentation" identifier="showTabsLogin" id="uhg-U0-LSa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCF-oC-uRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +291,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchIcon" width="958" height="320"/>
+        <image name="launchIcon" width="400" height="136"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uhg-U0-LSa"/>
+    </inferredMetricsTieBreakers>
 </document>

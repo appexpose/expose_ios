@@ -47,19 +47,24 @@ class UpdateContacts{
         }
         updateContactTaks.resume()
     }*/
-    static func updateContacts(contactsArray:[ModelContact]){
+    static func updateContacts(){
+        let contactsArray = Contact.returnAllContacts()
+        var cont = 0
         for contact in contactsArray{
-            var phone = ""
-            if(contact.phoneNumber.substringWithRange(contact.phoneNumber.startIndex ..< contact.phoneNumber.startIndex.advancedBy(1)) == "+" || contact.phoneNumber.substringWithRange(contact.phoneNumber.startIndex ..< contact.phoneNumber.startIndex.advancedBy(2)) == "00"){
-                phone = contact.phoneNumber
-            }else{
-                phone = User.returnUserData()!.prefix + contact.phoneNumber
-            }
-            let params = ["phone": phone, "fullName": contact.name]
+            let params = ["phone": contact.phoneNumber, "fullName": contact.fullName]
             Alamofire.request(.POST, GlobalVariables.returnUrlREST() + "/users/\(User.returnUserData()!.userKey)/contacts", parameters: params).responseJSON { (response) in
-                print(response)
                 if let json = response.result.value{
-                    print(json)
+                    if let _ = json.objectForKey("contact") as? NSDictionary{
+                        //Todo ok
+                        if(cont == contactsArray.count - 1){
+                            NSNotificationCenter.defaultCenter().postNotificationName(GlobalVariables.returnAddContactsNotification(), object: nil)
+                        }else{
+                            cont += 1
+                        }
+                    }else if let codError = json.objectForKey("code") as? String, messageError = json.objectForKey("message") as? String{
+                        print(codError)
+                        print(messageError)
+                    }
                 }
             }
         }

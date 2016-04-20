@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Captura de pantalla 2016-04-13 a las 18.39.05.png",
+      "filename" : "expose_logo_white_400.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Captura de pantalla 2016-04-13 a las 18.39.05-1.png",
+      "filename" : "expose_logo_white_400-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Captura de pantalla 2016-04-13 a las 18.39.05-2.png",
+      "filename" : "expose_logo_white_400-2.png",
       "scale" : "3x"
     }
   ],

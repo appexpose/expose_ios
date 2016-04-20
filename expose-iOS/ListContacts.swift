@@ -7,38 +7,27 @@
 //
 
 import Foundation
+import Alamofire
 
 class ListContacts{
     
     static func listContacts(){
-        let urlServidor = "http://www.appexpose.com/server/1.0.1/models/model.php"
-        let params = "action=list_contacts&device_key=\(GlobalVariables.returnDeviceKey())"
-        let request = NSMutableURLRequest(URL: NSURL(string: urlServidor)!)
-        let session = NSURLSession.sharedSession()
-        request.HTTPMethod = "POST"
-        request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
-        let updateContactTaks = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-            guard data != nil else {
-                print("no data found: \(error)")
-                return
-            }
-            
-            do {
-                if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: [NSJSONReadingOptions.MutableContainers]) as? NSDictionary {
-                    if let resultCode = json.objectForKey("result") as? Int{
-                        if(resultCode == 1){
-                            print(json)
-                        }else{
-                            if let erroCode = json.objectForKey("error_code") as? String{
-                                print(erroCode)
-                            }
+        Alamofire.request(.GET, GlobalVariables.returnUrlREST() + "/users/\(User.returnUserData()!.userKey)/contacts").responseJSON { (response) in
+            if let json = response.result.value{
+                if let contactArrayJSON = json.objectForKey("contacts") as? [NSDictionary]{
+                    for contact in contactArrayJSON{
+                        if let phone = contact.objectForKey("phone") as? String{
+                            Contact.updateContact(phone, aDict: contact)
                         }
                     }
+                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalVariables.returnListContactsNotification(), object: nil)
+                    //print(userJSON)
+                    //_ = User(userJSON: userJSON)
+                    //_ = ContactsUtils.importContactsFromPhone()
+                    //UpdateContacts.updateContacts()
+                    
                 }
-            }catch let error as NSError{
-                print(error.localizedDescription)
             }
         }
-        updateContactTaks.resume()
     }
 }
